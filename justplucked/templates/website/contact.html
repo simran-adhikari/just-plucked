@@ -1,0 +1,68 @@
+{% extends "website/base.html" %}
+{% block content %}
+<div class="page-content pt-50">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-10 col-lg-12 m-auto">
+                <section class="mb-50">
+                    <div class="row mb-60">
+                        <div class="row">
+                            <div class="col-xl-8">
+                                <div class="contact-from-area padding-20-row-col">
+                                    <h5 class="text-brand mb-10">Contact form</h5>
+                                    <h2 class="mb-10">We’re here for you</h2>
+                                    <p class="text-muted mb-30 font-sm">Have a question or feedback? Fill out the form below, and we'll get back to you as soon as possible.</p>
+                                    <form class="contact-form-style mt-30" id="contact-form" action="#" method="post">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6">
+                                                <div class="input-style mb-20">
+                                                    <input name="name" placeholder="Full Name" type="text" />
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6">
+                                                <div class="input-style mb-20">
+                                                    <input name="email" placeholder="Your Email" type="email" />
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6">
+                                                <div class="input-style mb-20">
+                                                    <input name="telephone" placeholder="Phone Number" type="tel" />
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6">
+                                                <div class="input-style mb-20">
+                                                    <input name="subject" placeholder="Subject" type="text" />
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12 col-md-12">
+                                                <div class="textarea-style mb-30">
+                                                    <textarea name="message" placeholder="Message"></textarea>
+                                                </div>
+                                                <button class="submit submit-auto-width" type="submit">Send message</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <p class="form-messege"></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 pl-50 d-lg-block d-none">
+                                <div class="border-radius-15 mt-50">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.698233991378!2d-0.1278285!3d51.5073509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761d47a9b9031d%3A0x692a05374bc6f094!2sLondon%2C%20UK!5e0!3m2!1sen!2snp!4v1713519758888!5m2!1sen!2snp"
+                                        width="100%"
+                                        height="450"
+                                        style="border:0;"
+                                        allowfullscreen=""
+                                        loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade"
+                                    ></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

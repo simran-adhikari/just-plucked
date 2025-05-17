@@ -1,0 +1,47 @@
+{% extends 'website/base.html' %}
+{% block title %}
+Orders
+{% endblock title %}
+
+{% block content%}
+     <div class="card">
+        <div class="card-header">
+            <h3 class="mb-0">Your Orders</h3>
+        </div>
+        <div class="card-body">
+            {% if orders %}
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Order</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Total</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for order in orders %}
+                        <tr>
+                            <td>#{{ order.invoice_id }}</td>
+                            <td>{{ order.created|date:"F d, Y" }}</td>
+                            <td>{{ order.get_status_display }}</td>
+                            <td>${{ order.total }} for {{ order.items.count }} item{% if order.items.count > 1 %}s{% endif %}</td>
+                            <td><a href="{% url 'order_detail' order.id %}" class="btn-small d-block">View</a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% else %}
+            <div class="alert alert-info">
+                You haven't placed any orders yet. <a href="{% url 'product_list' %}" class="alert-link">Start shopping</a>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+{% endblock content %}
+    
+ 

@@ -1,0 +1,300 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block content %}
+<style>
+    /* Style using class */
+.InputElement {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 12px 16px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.InputElement:focus {
+  border-color: #0070f3;
+  box-shadow: 0 0 0 3px rgba(0, 112, 243, 0.2);
+  outline: none;
+}
+
+/* Placeholder styling */
+.InputElement::placeholder {
+  color: #888;
+  font-style: italic;
+}
+
+</style>
+<main class="main">
+    
+    <div class="container mb-80 mt-50">
+        <div class="row">
+            <div class="col-lg-8 mb-40">
+                <h1 class="heading-2 mb-10">Checkout</h1>
+                <div class="d-flex justify-content-between">
+                    <h6 class="text-body">There are <span class="text-brand">{{ cart.items.count }}</span> products in your cart</h6>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-7">
+                <div class="row mb-50">
+                    <div class="col-lg-6 mb-sm-15 mb-lg-0 mb-md-3">
+                        <div class="toggle_info">
+                            <span><i class="fi-rs-user mr-10"></i><span class="text-muted font-lg">Already have an account?</span> <a href="#loginform" data-bs-toggle="collapse" class="collapsed font-lg" aria-expanded="false">Click here to login</a></span>
+                        </div>
+                        <div class="panel-collapse collapse login_form" id="loginform">
+                            <div class="panel-body">
+                                <p class="mb-30 font-sm">If you have shopped with us before, please enter your details below. If you are a new customer, please proceed to the Billing section.</p>
+                                 
+                            </div>
+                        </div>
+                    </div>
+                     
+                </div>
+                <div class="row">
+                    <h4 class="mb-30">Billing Details</h4>
+                    <form method="post" id="payment-form">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="form-group col-lg-6">
+                                <input type="text" required name="first_name" placeholder="First name *" value="{{ request.user.first_name|default:'' }}">
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <input type="text" required name="last_name" placeholder="Last name *" value="{{ request.user.last_name|default:'' }}">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-lg-6">
+                                <input type="text" name="address" required placeholder="Address *" value="{{ request.user.profile.address|default:'' }}">
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <input type="text" name="address2" placeholder="Address line2" value="{{ request.user.profile.address2|default:'' }}">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-lg-6">
+                                <input required type="text" name="postcode" placeholder="Postcode / ZIP *" value="{{ request.user.profile.postcode|default:'' }}">
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <input required type="text" name="phone" placeholder="Phone *" value="{{ request.user.profile.phone|default:'' }}">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-lg-6">
+                                <input type="text" name="company" placeholder="Company Name" value="{{ request.user.profile.company|default:'' }}">
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <input required type="email" name="email" placeholder="Email address *" value="{{ request.user.email|default:'' }}">
+                            </div>
+                        </div>
+                        <div class="form-group mb-30">
+                            <textarea rows="5" name="notes" placeholder="Additional information"></textarea>
+                        </div>
+                        <div id="card-element"></div>
+                        <div id="card-errors" style="color: red; margin-top:10px;"></div>
+                        
+                        {% if not request.user.is_authenticated %}
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <div class="custome-checkbox">
+                                    <input class="form-check-input" type="checkbox" name="create_account" id="createaccount">
+                                    <label class="form-check-label label_info" data-bs-toggle="collapse" href="#collapsePassword" data-target="#collapsePassword" aria-controls="collapsePassword" for="createaccount"><span>Create an account?</span></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="collapsePassword" class="form-group create-account collapse in">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <input type="password" placeholder="Password" name="password">
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
+                        
+                        <div class="payment ml-30">
+                             
+                            <div class="payment-logo d-flex">
+                                <img class="mr-15" src="{% static 'imgs/theme/icons/payment-visa.svg' %}" alt="">
+                                <img class="mr-15" src="{% static 'imgs/theme/icons/payment-master.svg' %}" alt="">
+                            </div>
+                            
+                            <div id="card-element" class="mb-3 mt-3"></div>
+                            <div id="card-errors" role="alert" class="text-danger mb-3"></div>
+                            
+                            <button id="submit-button" class="btn btn-fill-out btn-block mt-30">
+                                Place an Order <i class="fi-rs-sign-out ml-15"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="border p-40 cart-totals ml-30 mb-50">
+                    <div class="d-flex align-items-end justify-content-between mb-30">
+                        <h4>Your Order</h4>
+                        <h6 class="text-muted">Subtotal</h6>
+                    </div>
+                    <div class="divider-2 mb-30"></div>
+                    <div class="table-responsive order_table checkout">
+                        <table class="table no-border">
+                            <tbody>
+                                {% for item in cart.items.all %}
+                                <tr>
+                                    <td class="image product-thumbnail">
+                                        {% if item.product.image %} 
+                                        <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                                        {% else %}
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg" alt="{{ item.product.name }}">
+                                        {% endif %}
+                                    </td>
+                                    <td>
+                                        <h6 class="w-160 mb-5">
+                                            <a href="{{ item.product.get_absolute_url }}" class="text-heading">{{ item.product.name }}</a>
+                                        </h6>
+                                        <div class="product-rate-cover">
+                                            <div class="product-rate d-inline-block">
+                                                <div class="product-rating" style="width:90%"></div>
+                                            </div>
+                                            <span class="font-small ml-5 text-muted">({{ item.product.rating|default:"4.0" }})</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <h6 class="text-muted pl-20 pr-20">x {{ item.quantity }}</h6>
+                                    </td>
+                                    <td>
+                                        <h4 class="text-brand">${{ item.total_price }}</h4>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="divider-2 mb-30"></div>
+                    
+                    <div class="table-responsive">
+                        <table class="table no-border">
+                            <tbody>
+                                {% if cart.coupon %}
+                                <tr>
+                                    <td class="cart_total_label">
+                                        <h6 class="text-muted">Coupon ({{ cart.coupon.code }})</h6>
+                                    </td>
+                                    <td class="cart_total_amount">
+                                        <h4 class="text-brand text-end">-{{ cart.coupon.discount_percent }}%</h4>
+                                    </td>
+                                </tr>
+                                {% endif %}
+                                <tr>
+                                    <td class="cart_total_label">
+                                        <h6 class="text-muted">Total</h6>
+                                    </td>
+                                    <td class="cart_total_amount">
+                                        <h4 class="text-brand text-end">${{ cart.total }}</h4>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<span id="cart-id-main" style="visibility:hidden;display:none">{{cart.id}}</span>
+<!-- Stripe.js -->
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+  // Helper: get CSRF token from cookies
+  function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+      document.cookie.split(';').forEach(cookie => {
+        const [key, val] = cookie.trim().split('=');
+        if (key === name) cookieValue = decodeURIComponent(val);
+      });
+    }
+    return cookieValue;
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const stripe = Stripe('pk_test_51RI4mmIHchYkQBZzCaZsPftC7gcmb6faO0Kv5nkSLzsxiusgS9cMp8jtplkHKpoeTLXwWzdCC2DclnuXutRaNO6r00SPuYRmjt');
+    const elements = stripe.elements();
+    const cardElement = elements.create('card');
+    cardElement.mount('#card-element');
+
+    const form = document.getElementById('payment-form');
+    const submitButton = document.getElementById('submit-button');
+    const cardErrors = document.getElementById('card-errors');
+    const cartId = document.getElementById('cart-id-main').textContent.trim();
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      submitButton.disabled = true;
+      cardErrors.textContent = '';
+
+      try {
+        // 1) Create PaymentIntent on the server
+        const piResp = await fetch('/create-payment-intent/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            // optional: server can ignore amount if it uses cart.total
+            amount: Math.round({{ cart.total|floatformat:2 }} * 100)
+          })
+        });
+        const piData = await piResp.json();
+        if (piData.error) throw new Error(piData.error);
+
+        // 2) Confirm card payment
+        const { error, paymentIntent } = await stripe.confirmCardPayment(piData.clientSecret, {
+          payment_method: {
+            card: cardElement,
+            billing_details: {
+              name: `${form.querySelector('[name="first_name"]').value} ${form.querySelector('[name="last_name"]').value}`,
+              email: form.querySelector('[name="email"]').value,
+              phone: form.querySelector('[name="phone"]').value,
+              address: {
+                line1: form.querySelector('[name="address"]').value,
+                line2: form.querySelector('[name="address2"]').value,
+                postal_code: form.querySelector('[name="postcode"]').value
+              }
+            }
+          }
+        });
+        if (error) {
+          cardErrors.textContent = error.message;
+          submitButton.disabled = false;
+          return;
+        }
+
+        // 3) On success, create the Django Order
+        if (paymentIntent.status === 'succeeded') {
+          const csrfToken = getCookie('csrftoken');
+          const orderResp = await fetch(`../../create-order/${cartId}`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'X-CSRFToken': csrfToken
+            }
+          });
+          const orderData = await orderResp.json();
+          if (orderData.success) {
+            window.location.href = orderData.redirect_url;
+          } else {
+            throw new Error(orderData.error || 'Order creation failed');
+          }
+        }
+      } catch (err) {
+        console.error(err);
+        cardErrors.textContent = err.message || 'An unexpected error occurred.';
+        submitButton.disabled = false;
+      }
+    });
+  });
+</script>
+
+
+{% endblock %}

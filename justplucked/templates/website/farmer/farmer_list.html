@@ -1,0 +1,157 @@
+{% extends "website/base.html" %}
+
+{% block content %}
+<main class="main pages mb-80 p-30">
+    <div class="container">
+        <div class="archive-header-2 text-center">
+            <h1 class="display-2 mb-50">Farmers List</h1>
+        </div>
+
+        <div class="row mb-50">
+            <div class="col-12 col-lg-8 mx-auto">
+                <div class="shop-product-fillter">
+                    <div class="totall-product">
+    <p>We have <strong class="text-brand">{{ farmers|length }}</strong> farmers registered</p>
+</div>
+
+                    <div class="sort-by-product-area">
+                        <div class="sort-by-cover mr-10">
+                            <div class="sort-by-product-wrap">
+                                <div class="sort-by">
+                                    <span><i class="fi-rs-apps"></i>Show:</span>
+                                </div>
+                                <div class="sort-by-dropdown-wrap">
+                                    <span>{{ request.GET.per_page|default:16 }} <i class="fi-rs-angle-small-down"></i></span>
+                                </div>
+                            </div>
+                            <div class="sort-by-dropdown">
+    <ul>
+        {% for num in per_page_options %}
+            <li>
+                <a href="?per_page={{ num }}" class="{% if request.GET.per_page == num|stringformat:'s' %}active{% endif %}">
+                    {{ num }}
+                </a>
+            </li>
+        {% endfor %}
+        <li>
+            <a href="?per_page=all" class="{% if request.GET.per_page == 'all' %}active{% endif %}">All</a>
+        </li>
+    </ul>
+</div>
+
+                        </div>
+
+                        <div class="sort-by-cover">
+                            <div class="sort-by-product-wrap">
+                                <div class="sort-by">
+                                    <span><i class="fi-rs-apps-sort"></i>Sort by:</span>
+                                </div>
+                                <div class="sort-by-dropdown-wrap">
+                                    <span>{{ request.GET.sort|default:"Newest" }} <i class="fi-rs-angle-small-down"></i></span>
+                                </div>
+                            </div>
+                            <div class="sort-by-dropdown">
+                                <ul>
+                                    <li><a href="?sort=newest&{{ request.GET.urlencode|cut:'sort='|cut:'&' }}">Newest</a></li>
+                                    <li><a href="?sort=verified&{{ request.GET.urlencode|cut:'sort='|cut:'&' }}">Verified</a></li>
+                                    <li><a href="?sort=experience&{{ request.GET.urlencode|cut:'sort='|cut:'&' }}">Experience</a></li>
+                                    <li><a href="?sort=land&{{ request.GET.urlencode|cut:'sort='|cut:'&' }}">Farm Size</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row vendor-grid">
+            {% for farmer in farmers %}
+            <div class="col-lg-3 col-md-6 col-12 col-sm-6">
+                <div class="vendor-wrap mb-40">
+                    <div class="vendor-img-action-wrap">
+                        <div class="vendor-img">
+                            <a href="{% url 'farmer-detail' pk=farmer.pk %}">
+                                {% if farmer.profile_picture %}
+                                    <img class="default-img" src="{{ farmer.profile_picture.url }}" alt="{{ farmer.full_name }}" />
+                                {% else %}
+                                    <img class="default-img" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="{{ farmer.full_name }}" style="width: 100px;height:100px"/>
+                                {% endif %}
+                            </a>
+                        </div>
+                        {% if farmer.verified %}
+                        <div class="product-badges product-badges-position product-badges-mrg">
+                            <span class="best">Verified</span>
+                        </div>
+                        {% endif %}
+                    </div>
+                    <div class="vendor-content-wrap">
+                        <div class="d-flex justify-content-between align-items-end mb-30">
+                            <div>
+                                <div class="product-category">
+                                    <span class="text-muted">
+                                        {% if farmer.farming_experience_years %}
+                                            {{ farmer.farming_experience_years }} years experience
+                                        {% else %}
+                                            Experienced farmer
+                                        {% endif %}
+                                    </span>
+                                </div>
+                                <h4 class="mb-5"><a href="{% url 'farmer-detail' pk=farmer.pk %}">{{ farmer.full_name }}</a></h4>
+                            </div>
+                            <div class="mb-10">
+                                {% if farmer.land_area_in_acres %}
+                                    <span class="font-small total-product">{{ farmer.land_area_in_acres }} acres</span>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="vendor-info mb-30">
+                            <ul class="contact-infor text-muted">
+                                <li>
+                                    <img src="/static/images/icons/location.svg" alt="" />
+                                    <strong>Location: </strong> 
+                                    <span>{{ farmer.district }}, {{ farmer.country.name }}</span>
+                                </li>
+                                <li>
+                                    <img src="/static/images/icons/phone.svg" alt="" />
+                                    <strong>Contact:</strong>
+                                    <span>{{ farmer.phone }}</span>
+                                </li>
+                                {% if farmer.primary_crop %}
+                                <li>
+                                    <img src="/static/images/icons/crop.svg" alt="" />
+                                    <strong>Main Crop:</strong>
+                                    <span>{{ farmer.primary_crop }}</span>
+                                </li>
+                                {% endif %}
+                            </ul>
+                        </div>
+                        <a href="{% url 'farmer-detail' pk=farmer.pk %}" class="btn btn-xs">
+                            View Profile <i class="fi-rs-arrow-small-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Pagination -->
+        {% if is_paginated %}
+        <nav class="mt-4">
+            <ul class="pagination justify-content-center">
+                {% if page_obj.has_previous %}
+                    <li class="page-item"><a class="page-link" href="?page=1&{{ request.GET.urlencode }}">First</a></li>
+                    <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}&{{ request.GET.urlencode }}">Previous</a></li>
+                {% endif %}
+
+                <li class="page-item disabled"><a class="page-link" href="#">Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</a></li>
+
+                {% if page_obj.has_next %}
+                    <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}&{{ request.GET.urlencode }}">Next</a></li>
+                    <li class="page-item"><a class="page-link" href="?page={{ page_obj.paginator.num_pages }}&{{ request.GET.urlencode }}">Last</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+        {% endif %}
+    </div>
+</main>
+{% endblock %}

@@ -1,0 +1,118 @@
+{% extends 'website/base.html' %} {% load crispy_forms_tags %} 
+{% block title %}
+Register as a Farmer {% endblock title %} {% block content %}
+<style>
+  .form-control,.form-select{
+    border-color:  #4caf50;
+    border-width: 2px;
+  }
+</style>
+<main class="main pages">
+    <div class="page-header mt-30 mb-">
+            <div class="container">
+                
+                <div class="row justify-content-center align-items-center">
+                    <div class="text-center">
+                        <h2 class="mb-15">Register As A Farmer</h2>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+  <div class="p-5">
+    
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+      {{ message }}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  {% endfor %}
+  <div class="card"> 
+    <div class="card-body"> 
+    <form method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+
+      <!-- Personal Details -->
+      <div class="row">
+        <div class="col-md-6 mb-3">{{ form.full_name|as_crispy_field }}</div>
+        <div class="col-md-6 mb-3">{{ form.gender|as_crispy_field }}</div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          {{ form.date_of_birth|as_crispy_field }}
+        </div>
+        <div class="col-md-6 mb-3">
+          {{ form.marital_status|as_crispy_field }}
+        </div>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="row">
+        <div class="col-md-6 mb-3">{{ form.phone|as_crispy_field }}</div>
+        <div class="col-md-6 mb-3">
+          {{ form.alternate_phone|as_crispy_field }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 mb-3">{{ form.email|as_crispy_field }}</div>
+      </div>
+
+      <!-- Address -->
+      <div class="row">
+        <div class="col-md-6 mb-3">{{ form.country|as_crispy_field }}</div>
+        <div class="col-md-6 mb-3">{{ form.state|as_crispy_field }}</div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 mb-3">{{ form.district|as_crispy_field }}</div>
+        <div class="col-md-6 mb-3">{{ form.municipality|as_crispy_field }}</div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 mb-3">{{ form.ward_no|as_crispy_field }}</div>
+        <div class="col-md-6 mb-3">
+          {{ form.street_address|as_crispy_field }}
+        </div>
+      </div>
+
+      <!-- Identity -->
+      <div class="row">
+        <div class="col-md-6 mb-3">{{ form.nid_number|as_crispy_field }}</div>
+        <div class="col-md-6 mb-3">{{ form.nid_document|as_crispy_field }}</div>
+      </div>
+
+      <!-- Bank Info -->
+      <div class="row">
+        <div class="col-md-4 mb-3">{{ form.bank_name|as_crispy_field }}</div>
+        <div class="col-md-4 mb-3">
+          {{ form.bank_account_number|as_crispy_field }}
+        </div>
+        <div class="col-md-4 mb-3">{{ form.bank_branch|as_crispy_field }}</div>
+      </div>
+
+      <!-- Farming Info -->
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          {{ form.land_area_in_acres|as_crispy_field }}
+        </div>
+        <div class="col-md-6 mb-3">{{ form.primary_crop|as_crispy_field }}</div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          {{ form.farming_experience_years|as_crispy_field }}
+        </div>
+        <div class="col-md-6 mb-3">
+          {{ form.profile_picture|as_crispy_field }}
+        </div>
+      </div>
+
+      <!-- Submit -->
+      <div class="row">
+        <div class="col-md-12 text-end">
+          <button type="submit" class="btn btn-primary">Register</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  </div>
+  </div>
+</main>
+{% endblock content %}

@@ -1,0 +1,110 @@
+{% extends "website/base.html" %}
+
+{% block content %}
+<main class="main">
+    
+    <div class="page-content mb-50">
+        <div class="container">
+            <div class="row">
+                <!-- Main Blog Content Area -->
+                <div class="col-xl-8 col-lg-8">
+                    <div class="single-page pt-50 pr-30">
+
+                        <!-- Blog Header -->
+                        <div class="single-header style-2 mb-40">
+                            <div class="row">
+                                <div class="col-xl-10 col-lg-12 m-auto">
+                                    <h6 class="category-name mb-10">
+                                        <a href="{% url 'blog-list' %}" class="text-dark">{{ blog.category.name }}</a>
+                                    </h6>
+                                    <h2 class="blog-title mb-10">{{ blog.title }}</h2>
+                                    <div class="single-header-meta font-xs">
+                                        <span class="author">
+                                            By <a href="{% url 'author-blog-list' username=blog.author.username %}">
+                                                {{ blog.author.get_full_name|default:blog.author.username }}
+                                            </a>
+                                        </span>
+                                        <span class="ml-30">{{ blog.created_at|date:"M d, Y" }}</span>
+                                        {% if blog.tags.exists %}
+                                        <span class="ml-30">Tags:
+                                            {% for tag in blog.tags.all %}
+                                            <a href="{% url 'blog-list' %}" class="text-brand">{{ tag.name }}</a>{% if not forloop.last %}, {% endif %}
+                                            {% endfor %}
+                                        </span>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Featured Image -->
+                        {% if blog.thumbnail %}
+                        <figure class="single-thumbnail mb-40">
+                            <img src="{{ blog.thumbnail.url }}" alt="{{ blog.title }}" class="w-100 rounded-15 shadow-lg" />
+                        </figure>
+                        {% else %}
+                        <img class="border-radius-15" src="https://thumb.ac-illust.com/b1/b170870007dfa419295d949814474ab2_t.jpeg" alt="{{ blog.title }}" />
+                        {% endif %}
+
+                        <!-- Blog Content -->
+                        <div class="single-content mb-40">
+                            <div class="row">
+                                <div class="col-xl-10 col-lg-12 m-auto">
+                                    <div class="blog-content-details">
+                                        {{ blog.content|safe }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Sharing -->
+                         
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="col-xl-4 col-lg-4">
+                    <div class="primary-sidebar sticky-sidebar pt-50">
+                        <!-- Search Widget -->
+                        <div class="widget-area mb-50">
+                            <div class="sidebar-widget widget_search">
+                                <div class="search-form">
+                                    <form action="{% url 'blog-list' %}">
+                                        <input type="text" placeholder="Search blogs..." name="q" />
+                                        <button type="submit"><i class="fi-rs-search"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Categories Widget -->
+                        <div class="sidebar-widget widget-category-2 mb-30">
+                            <h5 class="section-title style-1 mb-30">Categories</h5>
+                            <ul>
+                                {% for category in categories %}
+  {% if category.slug %}
+    <li>
+      <a href="{% url 'blog-list-by-category' category_slug=category.slug %}"
+         class="d-flex justify-content-between align-items-center">
+        <span>{{ category.name }}</span>
+        <span class="count">{{ category.blog_set.count }}</span>
+      </a>
+    </li>
+  {% endif %}
+{% endfor %}
+
+    
+
+                            </ul>
+                        </div>
+
+                        <!-- Popular Posts Widget -->
+                         
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

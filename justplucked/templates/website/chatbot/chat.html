@@ -1,0 +1,52 @@
+{% extends "website/chatbot/chatbot-base.html" %}
+
+{% block content %}
+<div class="chat-container">
+     
+    <div class="chat-messages" id="chat-messages">
+        <div class="message bot-message">
+            Hi! Ask me about our fresh farm products and services.
+        </div>
+    </div>
+    <div class="chat-input">
+        <input type="text" id="user-input" placeholder="Type your question..." autofocus>
+        <button id="send-btn">Send</button>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const inputField = document.getElementById('user-input');
+    const sendButton = document.getElementById('send-btn');
+    const chatContainer = document.getElementById('chat-messages');
+
+    function sendMessage() {
+        const message = inputField.value.trim();
+        if (!message) return;
+        
+        // Add user message
+        chatContainer.innerHTML += `
+            <div class="message user-message">${message}</div>
+        `;
+        
+        inputField.value = '';
+        chatContainer.scrollTop = chatContainer.scrollHeight;
+        
+        // Get bot response
+        fetch(`/chatbot/get-response/?input=${encodeURIComponent(message)}`)
+            .then(response => response.json())
+            .then(data => {
+                chatContainer.innerHTML += `
+                    <div class="message bot-message">${data.response}</div>
+                `;
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+            });
+    }
+
+    sendButton.addEventListener('click', sendMessage);
+    inputField.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') sendMessage();
+    });
+});
+</script>
+{% endblock %}

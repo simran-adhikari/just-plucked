@@ -1,0 +1,53 @@
+{% extends 'website/base.html' %}
+
+{% block content %}
+    <h1>{{ category.name }} - Category</h1>
+
+    <!-- Search Form -->
+    <form method="get">
+        <div>
+            <label for="search">Search Products:</label>
+            <input type="text" name="search" id="search" placeholder="Search by name or description" value="{{ search_query }}">
+        </div>
+
+        <!-- Sorting Options -->
+        <div>
+            <label for="sort">Sort by:</label>
+            <select name="sort" id="sort">
+                <option value="name" {% if sort_by == 'name' %}selected{% endif %}>Name</option>
+                <option value="price_asc" {% if sort_by == 'price_asc' %}selected{% endif %}>Price: Low to High</option>
+                <option value="price_desc" {% if sort_by == 'price_desc' %}selected{% endif %}>Price: High to Low</option>
+                <option value="created" {% if sort_by == 'created' %}selected{% endif %}>Newest First</option>
+            </select>
+        </div>
+
+        <!-- Price Range Filter -->
+        <div>
+            <label for="price_min">Price Min:</label>
+            <input type="number" name="price_min" id="price_min" value="{{ filter_price_min }}">
+        </div>
+        <div>
+            <label for="price_max">Price Max:</label>
+            <input type="number" name="price_max" id="price_max" value="{{ filter_price_max }}">
+        </div>
+
+        <button type="submit">Apply Filters</button>
+    </form>
+
+    <!-- Product Listing -->
+    <div class="product-list">
+        {% for product in products %}
+            <div class="product">
+                <a href="{% url 'product_detail' product.slug %}">
+                    <img src="{{ product.image.url }}" alt="{{ product.name }}" width="200">
+                    <h2>{{ product.name }}</h2>
+                    <p>{{ product.description }}</p>
+                    <p>Price: ${{ product.regular_price }}</p>
+                    <p>Stock: {{ product.stock_quantity }}</p>
+                </a>
+            </div>
+        {% empty %}
+            <p>No products found in this category.</p>
+        {% endfor %}
+    </div>
+{% endblock %}

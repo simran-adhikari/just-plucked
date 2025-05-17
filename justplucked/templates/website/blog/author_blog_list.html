@@ -1,0 +1,55 @@
+{% extends "website/base.html" %}
+{% block content %}
+
+ 
+    <div class="page-header breadcrumb-wrap">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="{% url 'home' %}" rel="nofollow"><i class="fi-rs-home mr-5"></i>Home</a>
+                <span></span> Blog <span></span> {{ author.username }}
+            </div>
+        </div>
+    </div>
+
+    <div class="page-content pt-50 pb-100">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="heading_s1 mb-4">
+                        <h1>Blogs by {{ author.username }}</h1>
+                    </div>
+                    <ul class="list-unstyled">
+                        {% for blog in blogs %}
+                            <li class="mb-4 border-bottom pb-3">
+                                <h4><a href="{% url 'blog-detail' slug=blog.slug %}" class="text-dark">{{ blog.title }}</a></h4>
+                                <p class="text-muted">{{ blog.content|truncatewords:20 }}</p>
+                            </li>
+                        {% empty %}
+                            <li>No blogs found for this author.</li>
+                        {% endfor %}
+                    </ul>
+
+                    {% if blogs.has_other_pages %}
+                        <nav class="mt-4">
+                            <ul class="pagination justify-content-center">
+                                {% if blogs.has_previous %}
+                                    <li class="page-item"><a class="page-link" href="?page=1">&laquo; First</a></li>
+                                    <li class="page-item"><a class="page-link" href="?page={{ blogs.previous_page_number }}">Previous</a></li>
+                                {% endif %}
+
+                                <li class="page-item disabled"><span class="page-link">Page {{ blogs.number }} of {{ blogs.paginator.num_pages }}</span></li>
+
+                                {% if blogs.has_next %}
+                                    <li class="page-item"><a class="page-link" href="?page={{ blogs.next_page_number }}">Next</a></li>
+                                    <li class="page-item"><a class="page-link" href="?page={{ blogs.paginator.num_pages }}">Last &raquo;</a></li>
+                                {% endif %}
+                            </ul>
+                        </nav>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+
+{% endblock %}

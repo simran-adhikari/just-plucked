@@ -1,0 +1,205 @@
+{% extends "website/base.html" %}
+
+{% block content %}
+<main class="main">
+    <div class="container mb-30 pt-40 mb-40">
+        <div class="archive-header-2 text-center pt-10 pb-10 d-flex justify-content-center align-items-center gap-3 flex-wrap">
+            {% if farmer.profile_picture %}
+            <img src="{{ farmer.profile_picture.url }}" alt="{{ farmer.full_name }}"
+                 class="img-fluid rounded-circle border border-3 border-success"
+                 style="width: 120px; height: 120px; object-fit: cover;">
+            {% else %}
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAd5avdba8EiOZH8lmV3XshrXx7dKRZvhx-A&s"
+                 alt="{{ farmer.full_name }}"
+                 class="img-fluid rounded-circle border border-3 border-success"
+                 style="width: 120px; height: 120px; object-fit: cover;">
+            {% endif %}
+
+            <h1 class="display-4 mb-0">{{ farmer.full_name }}</h1>
+        </div>
+
+        <div class="row flex-row-reverse">
+            <div class="col-lg-7">
+                <!-- Farmer Details in Tables -->
+                <div class="card mb-30 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h3 class="mb-4 pb-2 border-bottom">Farmer Details</h3>
+                        
+                        <!-- Contact Information -->
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <h5 class="mb-3 pb-2 border-bottom">Contact Information</h5>
+                                <table class="table table-borderless">
+                                    <tbody>
+                                        <tr>
+                                            <th width="40%" class="text-muted">Phone</th>
+                                            <td>{{ farmer.phone }}</td>
+                                        </tr>
+                                        {% if farmer.email %}
+                                        <tr>
+                                            <th class="text-muted">Email</th>
+                                            <td>{{ farmer.email }}</td>
+                                        </tr>
+                                        {% endif %}
+                                        <tr>
+                                            <th class="text-muted">Location</th>
+                                            <td>
+                                                {{ farmer.district }}, {{ farmer.country.name }}
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <!-- Farming Details -->
+                            <div class="col-md-6 mb-4">
+                                <h5 class="mb-3 pb-2 border-bottom">Farming Details</h5>
+                                <table class="table table-borderless">
+                                    <tbody>
+                                        <tr>
+                                            <th class="text-muted">Experience</th>
+                                            <td>{{ farmer.farming_experience_years|default:"0" }} years</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-muted">Primary Crop</th>
+                                            <td>{{ farmer.primary_crop|default:"-" }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-muted">Member Since</th>
+                                            <td>{{ farmer.date_joined|date:"M Y" }}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sidebar -->
+            <div class="col-lg-5 sticky-sidebar">
+                <div class="sidebar-widget widget-store-info mb-3 border-0 p-3 bg-light rounded shadow-sm">
+                    <div class="vendor-info">
+                        <h4 class="mb-3">Quick Info</h4>
+                        <table class="table table-sm table-borderless">
+                            <tbody>
+                                <tr>
+                                    <th class="text-muted">Status</th>
+                                    <td>
+                                        {% if farmer.verified %}
+                                            <span class="badge bg-success">Verified</span>
+                                        {% else %}
+                                            <span class="badge bg-secondary">Unverified</span>
+                                        {% endif %}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-muted">Products</th>
+                                    <td>{{ products|length }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h6 class="mt-4 mb-2">Contact Farmer</h6>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex align-items-center bg-transparent">
+                                <i class="fi-rs-phone-call me-2 text-muted"></i>
+                                {{ farmer.phone }}
+                            </li>
+                            {% if farmer.email %}
+                            <li class="list-group-item d-flex align-items-center bg-transparent">
+                                <i class="fi-rs-envelope me-2 text-muted"></i>
+                                {{ farmer.email }}
+                            </li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+
+                {% if farmer.farms.exists %}
+                <div class="sidebar-widget mb-3 p-3 bg-white rounded shadow-sm">
+                    <h5 class="section-title mb-3">Farm Locations</h5>
+                    <div class="table-responsive">
+                        <table class="table table-sm table-borderless">
+                            <thead>
+                                <tr>
+                                    <th class="text-muted">Farm Name</th>
+                                    <th class="text-muted">Type</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for farm in farmer.farms.all %}
+                                <tr>
+                                    <td>{{ farm.name }}</td>
+                                    <td>{{ farm.get_farm_type_display }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="row p-4">
+            <h3 class="section-title mb-4 pb-2 border-bottom">Products from this Farmer</h3>
+                
+            {% if products %}
+            <div class="row product-grid">
+                {% for product in products %}
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-cart-wrap mb-30 border-0 shadow-sm rounded">
+                        <div class="product-img-action-wrap">
+                            <div class="product-img product-img-zoom">
+                                <a href="{% url 'product_detail' product.slug %}">
+                                    {% if product.image %}
+                                    <img class="default-img img-fluid rounded-top" src="{{ product.image.url }}" alt="{{ product.name }}" />
+                                    {% else %}
+                                    <img class="default-img img-fluid rounded-top" src="https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg" alt="{{ product.name }}" />
+                                    {% endif %}
+                                </a>
+                            </div>
+                             
+                            {% if product.is_featured %}
+                            <div class="product-badges product-badges-position product-badges-mrg">
+                                <span class="hot">Featured</span>
+                            </div>
+                            {% endif %}
+                        </div>
+                        <div class="product-content-wrap p-3">
+                            <div class="product-category">
+                                <a href="#" class="text-muted">{{ product.category.name }}</a>
+                            </div>
+                            <h2><a href="{% url 'product_detail' product.slug %}" class="text-dark">{{ product.name }}</a></h2>
+                             
+                            <div class="product-card-bottom mt-3">
+                                <div class="product-price">
+                                    <span class="text-success">${{ product.regular_price}}</span>
+                                    {% if product.discounted_price %}
+                                    <span class="old-price text-muted">${{ product.discounted_price }}</span>
+                                    {% endif %}
+                                </div>
+                                <div class="add-cart">
+                                    <form method="post" action="{% url 'add_to_cart' product.id %}">
+                                            {% csrf_token %}
+                                            <button type="submit" class="add" >
+                                                <p class="add" >
+                                                <i class="fi-rs-shopping-cart mr-5"></i>Add
+                                                </p>
+                                            </button>
+                                        </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% else %}
+            <div class="alert alert-info border-0 shadow-sm">This farmer hasn't posted any products yet.</div>
+            {% endif %}
+        </div>
+    </div>
+</main>
+{% endblock %}

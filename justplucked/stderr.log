@@ -1,0 +1,1206 @@
+Invalid HTTP_HOST header: 'justplucked.vedanica.com'. You may need to add 'justplucked.vedanica.com' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/http/request.py", line 186, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'justplucked.vedanica.com'. You may need to add 'justplucked.vedanica.com' to ALLOWED_HOSTS.
+Bad Request: /
+Invalid HTTP_HOST header: 'justplucked.vedanica.com'. You may need to add 'justplucked.vedanica.com' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/http/request.py", line 186, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'justplucked.vedanica.com'. You may need to add 'justplucked.vedanica.com' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+Invalid HTTP_HOST header: 'justplucked.vedanica.com'. You may need to add 'justplucked.vedanica.com' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/http/request.py", line 186, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'justplucked.vedanica.com'. You may need to add 'justplucked.vedanica.com' to ALLOWED_HOSTS.
+Bad Request: /
+Invalid HTTP_HOST header: 'justplucked.vedanica.com'. You may need to add 'justplucked.vedanica.com' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/http/request.py", line 186, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'justplucked.vedanica.com'. You may need to add 'justplucked.vedanica.com' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+Invalid HTTP_HOST header: 'justplucked.vedanica.com'. You may need to add 'justplucked.vedanica.com' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/http/request.py", line 186, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'justplucked.vedanica.com'. You may need to add 'justplucked.vedanica.com' to ALLOWED_HOSTS.
+Bad Request: /
+Invalid HTTP_HOST header: 'justplucked.vedanica.com'. You may need to add 'justplucked.vedanica.com' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/http/request.py", line 186, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'justplucked.vedanica.com'. You may need to add 'justplucked.vedanica.com' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+Not Found: /justplucked.png
+Not Found: /justplucked.png
+Not Found: /products/justplucked.png
+Not Found: /products/justplucked.png
+Not Found: /products/justplucked.png
+Not Found: /justplucked.png
+Not Found: /accounts/login/justplucked.png
+Not Found: /accounts/login/justplucked.png
+Not Found: /justplucked.png
+Not Found: /justplucked.png
+Not Found: /about/justplucked.png
+Not Found: /products/justplucked.png
+Not Found: /static/images/icons/location.svg
+Not Found: /static/images/icons/crop.svg
+Not Found: /static/images/icons/phone.svg
+Not Found: /farmers/justplucked.png
+Not Found: /static/imgs/theme/icons/icon-blog.svg
+Not Found: /blog/blogs/justplucked.png
+Not Found: /static/imgs/theme/icons/icon-blog.svg
+Not Found: /blog/blogs/justplucked.png
+Not Found: /justplucked.png
+Not Found: /justplucked.png
+Not Found: /static/imgs/theme/icons/icon-blog.svg
+Not Found: /blog/blogs/justplucked.png
+Not Found: /justplucked.png
+Not Found: /about/justplucked.png
+Not Found: /static/imgs/blog/author-2.png
+Not Found: /products/organic-apples-20250426053150/justplucked.png
+Not Found: /justplucked.png
+Requested Range Not Satisfiable: /static/assets/imgs/banner/1.png
+Requested Range Not Satisfiable: /static/assets/imgs/banner/banner-3.png
+Not Found: /about/justplucked.png
+Not Found: /products/justplucked.png
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /justplucked.png
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /justplucked.png
+Not Found: /products/assets/imgs/theme/Spinner-3.gif
+Not Found: /products/justplucked.png
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /accounts/register/justplucked.png
+Not Found: /accounts/login/justplucked.png
+Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 449, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/views/decorators/debug.py", line 143, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/auth/views.py", line 89, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/views/generic/edit.py", line 151, in post
+    return self.form_valid(form)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/auth/views.py", line 108, in form_valid
+    auth_login(self.request, form.get_user())
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/auth/__init__.py", line 197, in login
+    user_logged_in.send(sender=user.__class__, request=request, user=user)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/auth/models.py", line 24, in update_last_login
+    user.save(update_fields=["last_login"])
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/auth/base_user.py", line 65, in save
+    super().save(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/base.py", line 902, in save
+    self.save_base(
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/base.py", line 1023, in save_base
+    post_save.send(
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/vedanica/justplucked/authapp/signals.py", line 11, in create_or_update_profile
+    instance.profile.save()
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 531, in __get__
+    raise self.RelatedObjectDoesNotExist(
+django.contrib.auth.models.User.profile.RelatedObjectDoesNotExist: User has no profile.
+Not Found: /favicon.ico
+Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 449, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/views/decorators/debug.py", line 143, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/auth/views.py", line 89, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/views/generic/edit.py", line 151, in post
+    return self.form_valid(form)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/auth/views.py", line 108, in form_valid
+    auth_login(self.request, form.get_user())
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/auth/__init__.py", line 197, in login
+    user_logged_in.send(sender=user.__class__, request=request, user=user)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/auth/models.py", line 24, in update_last_login
+    user.save(update_fields=["last_login"])
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/auth/base_user.py", line 65, in save
+    super().save(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/base.py", line 902, in save
+    self.save_base(
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/base.py", line 1023, in save_base
+    post_save.send(
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/vedanica/justplucked/authapp/signals.py", line 11, in create_or_update_profile
+    instance.profile.save()
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 531, in __get__
+    raise self.RelatedObjectDoesNotExist(
+django.contrib.auth.models.User.profile.RelatedObjectDoesNotExist: User has no profile.
+Not Found: /justplucked.png
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 449, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/views/decorators/debug.py", line 143, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/auth/views.py", line 89, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/views/generic/edit.py", line 151, in post
+    return self.form_valid(form)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/auth/views.py", line 108, in form_valid
+    auth_login(self.request, form.get_user())
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/auth/__init__.py", line 197, in login
+    user_logged_in.send(sender=user.__class__, request=request, user=user)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/auth/models.py", line 24, in update_last_login
+    user.save(update_fields=["last_login"])
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/auth/base_user.py", line 65, in save
+    super().save(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/base.py", line 902, in save
+    self.save_base(
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/base.py", line 1023, in save_base
+    post_save.send(
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/vedanica/justplucked/authapp/signals.py", line 11, in create_or_update_profile
+    instance.profile.save()
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 531, in __get__
+    raise self.RelatedObjectDoesNotExist(
+django.contrib.auth.models.User.profile.RelatedObjectDoesNotExist: User has no profile.
+Not Found: /favicon.ico
+Not Found: /products/assets/imgs/theme/Spinner-3.gif
+Not Found: /products/justplucked.png
+Not Found: /blog/blogs/assets/imgs/theme/Spinner-3.gif
+Not Found: /static/imgs/theme/icons/icon-blog.svg
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /farmers/assets/imgs/theme/Spinner-3.gif
+Not Found: /static/images/icons/location.svg
+Not Found: /static/images/icons/crop.svg
+Not Found: /static/images/icons/phone.svg
+Not Found: /products/assets/imgs/theme/Spinner-3.gif
+Not Found: /blog/blogs/assets/imgs/theme/Spinner-3.gif
+Not Found: /static/imgs/theme/icons/icon-blog.svg
+Not Found: /blog/blogs/farming-for-good-health/assets/imgs/theme/Spinner-3.gif
+Not Found: /blog/blogs/farming-for-good-health/justplucked.png
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /products/assets/imgs/theme/Spinner-3.gif
+[UID:2087][2839298] Child process with pid: 2852086 was killed by signal: 15, core dumped: no
+Not Found: /products/assets/imgs/theme/Spinner-3.gif
+Not Found: /products/assets/imgs/theme/Spinner-3.gif
+Not Found: /static/imgs/theme/icons/icon-blog.svg
+Not Found: /blog/blogs/assets/imgs/theme/Spinner-3.gif
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /static/imgs/theme/icons/icon-blog.svg
+Not Found: /blog/blogs/assets/imgs/theme/Spinner-3.gif
+Not Found: /blog/blogs/justplucked.png
+Not Found: /blog/blogs/farming-for-good-health/assets/imgs/theme/Spinner-3.gif
+Not Found: /blog/blogs/farming-for-good-health/justplucked.png
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /static/imgs/theme/icons/icon-blog.svg
+Not Found: /blog/blogs/assets/imgs/theme/Spinner-3.gif
+Not Found: /products/assets/imgs/theme/Spinner-3.gif
+Not Found: /static/images/icons/phone.svg
+Not Found: /static/images/icons/crop.svg
+Not Found: /farmers/assets/imgs/theme/Spinner-3.gif
+Not Found: /static/images/icons/location.svg
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /products/assets/imgs/theme/Spinner-3.gif
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /static/imgs/theme/icons/icon-blog.svg
+Not Found: /blog/blogs/assets/imgs/theme/Spinner-3.gif
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /justplucked.png
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /products/assets/imgs/theme/Spinner-3.gif
+Not Found: /products/assets/imgs/theme/Spinner-3.gif
+Not Found: /products/assets/imgs/theme/Spinner-3.gif
+Not Found: /products/assets/imgs/theme/Spinner-3.gif
+Not Found: /products/assets/imgs/theme/Spinner-3.gif
+Not Found: /products/assets/imgs/theme/Spinner-3.gif
+Internal Server Error: /products/
+Traceback (most recent call last):
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2128, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'dryfruits'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vedanica/justplucked/products/views.py", line 42, in product_list
+    products = products.filter(category_id=category_id)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 1481, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 1499, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 1506, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1643, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1675, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1585, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1412, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/lookups.py", line 38, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/fields/related_lookups.py", line 112, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2130, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got 'dryfruits'.
+Internal Server Error: /products/
+Traceback (most recent call last):
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2128, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'dryfruits'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vedanica/justplucked/products/views.py", line 42, in product_list
+    products = products.filter(category_id=category_id)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 1481, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 1499, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 1506, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1643, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1675, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1585, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1412, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/lookups.py", line 38, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/fields/related_lookups.py", line 112, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2130, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got 'dryfruits'.
+Not Found: /products/assets/imgs/theme/Spinner-3.gif
+Not Found: /products/assets/imgs/theme/Spinner-3.gif
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /products/assets/imgs/theme/Spinner-3.gif
+Internal Server Error: /products/
+Traceback (most recent call last):
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2128, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'fruits'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vedanica/justplucked/products/views.py", line 42, in product_list
+    products = products.filter(category_id=category_id)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 1481, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 1499, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 1506, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1643, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1675, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1585, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1412, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/lookups.py", line 38, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/fields/related_lookups.py", line 112, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2130, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got 'fruits'.
+Not Found: /products/assets/imgs/theme/Spinner-3.gif
+Not Found: /products/assets/imgs/theme/Spinner-3.gif
+Not Found: /products/assets/imgs/theme/Spinner-3.gif
+Not Found: /products/assets/imgs/theme/Spinner-3.gif
+Not Found: /products/assets/imgs/theme/Spinner-3.gif
+Not Found: /products/assets/imgs/theme/Spinner-3.gif
+Internal Server Error: /admin/products/product/add/
+Traceback (most recent call last):
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+sqlite3.IntegrityError: UNIQUE constraint failed: products_product.slug
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/admin/options.py", line 719, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 246, in inner
+    return view(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1984, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1843, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1894, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1314, in save_model
+    obj.save()
+  File "/home/vedanica/justplucked/products/models.py", line 42, in save
+    super().save(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/base.py", line 902, in save
+    self.save_base(
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/base.py", line 1008, in save_base
+    updated = self._save_table(
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/base.py", line 1169, in _save_table
+    results = self._do_insert(
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/base.py", line 1210, in _do_insert
+    return manager._insert(
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 1854, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1881, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+django.db.utils.IntegrityError: UNIQUE constraint failed: products_product.slug
+Not Found: /products/assets/imgs/theme/Spinner-3.gif
+Internal Server Error: /admin/products/product/add/
+Traceback (most recent call last):
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+sqlite3.IntegrityError: UNIQUE constraint failed: products_product.slug
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/admin/options.py", line 719, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 246, in inner
+    return view(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1984, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1843, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1894, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1314, in save_model
+    obj.save()
+  File "/home/vedanica/justplucked/products/models.py", line 42, in save
+    super().save(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/base.py", line 902, in save
+    self.save_base(
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/base.py", line 1008, in save_base
+    updated = self._save_table(
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/base.py", line 1169, in _save_table
+    results = self._do_insert(
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/base.py", line 1210, in _do_insert
+    return manager._insert(
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 1854, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1881, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+django.db.utils.IntegrityError: UNIQUE constraint failed: products_product.slug
+Not Found: /products/assets/imgs/theme/Spinner-3.gif
+Not Found: /products/almonds/assets/imgs/theme/Spinner-3.gif
+Not Found: /products/almonds/justplucked.png
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /products/assets/imgs/theme/Spinner-3.gif
+Not Found: /products/assets/imgs/theme/Spinner-3.gif
+Not Found: /products/assets/imgs/theme/Spinner-3.gif
+Not Found: /products/assets/imgs/theme/Spinner-3.gif
+Not Found: /static/imgs/theme/icons/icon-blog.svg
+Not Found: /blog/blogs/assets/imgs/theme/Spinner-3.gif
+Not Found: /about/assets/imgs/theme/Spinner-3.gif
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /about/assets/imgs/theme/Spinner-3.gif
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /products/assets/imgs/theme/Spinner-3.gif
+Not Found: /accounts/login/assets/imgs/theme/Spinner-3.gif
+Not Found: /accounts/login/justplucked.png
+Not Found: /accounts/login/assets/imgs/theme/Spinner-3.gif
+Not Found: /accounts/register/assets/imgs/theme/Spinner-3.gif
+Not Found: /accounts/register/justplucked.png
+Not Found: /accounts/register/assets/imgs/theme/Spinner-3.gif
+Not Found: /accounts/register/assets/imgs/theme/Spinner-3.gif
+Not Found: /accounts/register/assets/imgs/theme/Spinner-3.gif
+Not Found: /accounts/login/assets/imgs/theme/Spinner-3.gif
+----------------------------------Email Sent
+Not Found: /accounts/login/assets/imgs/theme/Spinner-3.gif
+Not Found: /accounts/login/justplucked.png
+Not Found: /accounts/login/assets/imgs/theme/Spinner-3.gif
+Not Found: /accounts/login/assets/imgs/theme/Spinner-3.gif
+Not Found: /accounts/login/assets/imgs/theme/Spinner-3.gif
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /products/assets/imgs/theme/Spinner-3.gif
+[UID:2087][2839298] Reached max children process limit: 6, extra: 2, current: 8, busy: 8, please increase LSAPI_CHILDREN.
+[UID:2087][2839298] Reached max children process limit: 6, extra: 2, current: 8, busy: 8, please increase LSAPI_CHILDREN.
+[UID:2087][2839298] Reached max children process limit: 6, extra: 2, current: 8, busy: 7, please increase LSAPI_CHILDREN.
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /products/assets/imgs/theme/Spinner-3.gif
+Not Found: /cart/assets/imgs/theme/Spinner-3.gif
+Not Found: /cart/justplucked.png
+Not Found: /products/assets/imgs/theme/Spinner-3.gif
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /contact/assets/imgs/theme/Spinner-3.gif
+Not Found: /contact/justplucked.png
+Not Found: /cart/assets/imgs/theme/Spinner-3.gif
+Forbidden (CSRF token from POST incorrect.): /accounts/login/
+Not Found: /sell-with-us/assets/imgs/theme/Spinner-3.gif
+Not Found: /sell-with-us/justplucked.png
+Not Found: /products/assets/imgs/theme/Spinner-3.gif
+Not Found: /checkout/assets/imgs/theme/Spinner-3.gif
+Not Found: /static/imgs/theme/icons/payment-visa.svg
+Not Found: /static/imgs/theme/icons/payment-master.svg
+Not Found: /checkout/justplucked.png
+List Trainer: 0it [00:00, ?it/s]List Trainer: 35it [00:00, 1686.14it/s]
+List Trainer: 0it [00:00, ?it/s]List Trainer: 39it [00:00, 3581.50it/s]
+List Trainer: 0it [00:00, ?it/s]List Trainer: 58it [00:00, 577.62it/s]List Trainer: 88it [00:00, 793.64it/s]
+List Trainer: 0it [00:00, ?it/s]List Trainer: 35it [00:00, 3015.94it/s]
+List Trainer: 0it [00:00, ?it/s]List Trainer: 39it [00:00, 3633.61it/s]
+List Trainer: 0it [00:00, ?it/s]List Trainer: 18it [00:00, 179.85it/s]List Trainer: 88it [00:00, 633.20it/s]
+List Trainer: 0it [00:00, ?it/s]List Trainer: 35it [00:00, 2250.03it/s]
+List Trainer: 0it [00:00, ?it/s]List Trainer: 39it [00:00, 2378.35it/s]
+List Trainer: 0it [00:00, ?it/s]List Trainer: 1it [00:00,  8.18it/s]List Trainer: 88it [00:00, 530.01it/s]
+List Trainer: 0it [00:00, ?it/s]List Trainer: 35it [00:00, 3445.38it/s]
+List Trainer: 0it [00:00, ?it/s]List Trainer: 39it [00:00, 3263.92it/s]
+List Trainer: 0it [00:00, ?it/s]List Trainer: 6it [00:00, 59.81it/s]List Trainer: 88it [00:00, 617.05it/s]
+List Trainer: 0it [00:00, ?it/s]List Trainer: 35it [00:00, 3479.60it/s]
+List Trainer: 0it [00:00, ?it/s]List Trainer: 39it [00:00, 3885.83it/s]
+List Trainer: 0it [00:00, ?it/s]List Trainer: 54it [00:00, 536.89it/s]List Trainer: 88it [00:00, 782.88it/s]
+Bad Request: /create-order/12
+Not Found: /justplucked.png
+Not Found: /justplucked.png
+Not Found: /c
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /cart/assets/imgs/theme/Spinner-3.gif
+Not Found: /static/imgs/theme/icons/payment-master.svg
+Not Found: /static/imgs/theme/icons/payment-visa.svg
+Not Found: /checkout/assets/imgs/theme/Spinner-3.gif
+Not Found: /cart/assets/imgs/theme/Spinner-3.gif
+Not Found: /static/imgs/theme/icons/payment-visa.svg
+Not Found: /checkout/assets/imgs/theme/Spinner-3.gif
+Not Found: /static/imgs/theme/icons/payment-master.svg
+Bad Request: /create-order/12
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /wishlist.html
+Not Found: /cart/assets/imgs/theme/Spinner-3.gif
+Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 449, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/views/decorators/debug.py", line 143, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/auth/views.py", line 89, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/views/generic/edit.py", line 151, in post
+    return self.form_valid(form)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/auth/views.py", line 108, in form_valid
+    auth_login(self.request, form.get_user())
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/auth/__init__.py", line 197, in login
+    user_logged_in.send(sender=user.__class__, request=request, user=user)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/auth/models.py", line 24, in update_last_login
+    user.save(update_fields=["last_login"])
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/auth/base_user.py", line 65, in save
+    super().save(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/base.py", line 902, in save
+    self.save_base(
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/base.py", line 1023, in save_base
+    post_save.send(
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/vedanica/justplucked/authapp/signals.py", line 11, in create_or_update_profile
+    instance.profile.save()
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 531, in __get__
+    raise self.RelatedObjectDoesNotExist(
+django.contrib.auth.models.User.profile.RelatedObjectDoesNotExist: User has no profile.
+Not Found: /favicon.ico
+Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 449, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/views/decorators/debug.py", line 143, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/auth/views.py", line 89, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/views/generic/edit.py", line 151, in post
+    return self.form_valid(form)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/auth/views.py", line 108, in form_valid
+    auth_login(self.request, form.get_user())
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/auth/__init__.py", line 197, in login
+    user_logged_in.send(sender=user.__class__, request=request, user=user)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/auth/models.py", line 24, in update_last_login
+    user.save(update_fields=["last_login"])
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/auth/base_user.py", line 65, in save
+    super().save(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/base.py", line 902, in save
+    self.save_base(
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/base.py", line 1023, in save_base
+    post_save.send(
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/vedanica/justplucked/authapp/signals.py", line 11, in create_or_update_profile
+    instance.profile.save()
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 531, in __get__
+    raise self.RelatedObjectDoesNotExist(
+django.contrib.auth.models.User.profile.RelatedObjectDoesNotExist: User has no profile.
+Internal Server Error: /admin/order/order/11/change/
+Traceback (most recent call last):
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/admin/options.py", line 719, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 246, in inner
+    return view(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1987, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1843, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1894, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1314, in save_model
+    obj.save()
+  File "/home/vedanica/justplucked/order/models.py", line 108, in save
+    super().save(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/base.py", line 902, in save
+    self.save_base(
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/base.py", line 1023, in save_base
+    post_save.send(
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/vedanica/justplucked/order/signals.py", line 47, in refresh_homepage_on_order_change
+    _rebuild_homepage_data()
+  File "/home/vedanica/justplucked/order/signals.py", line 28, in _rebuild_homepage_data
+    Product.objects
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 1481, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 1499, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 1506, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1643, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1675, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1585, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1399, in build_lookup
+    lhs = self.try_transform(lhs, name, lookups)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1455, in try_transform
+    raise FieldError(
+django.core.exceptions.FieldError: Unsupported lookup 'created_at__gte' for ForeignKey or join on the field not permitted.
+Not Found: /cart/assets/imgs/theme/Spinner-3.gif
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /justplucked.png
+Not Found: /products/bananas/
+Not Found: /favicon.ico
+Not Found: /products/bananas/
+Not Found: /products/bananas/
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /products/assets/imgs/theme/Spinner-3.gif
+Not Found: /products/assets/imgs/theme/Spinner-3.gif
+Not Found: /products/assets/imgs/theme/Spinner-3.gif
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /justplucked.png
+Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 449, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/views/decorators/debug.py", line 143, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/auth/views.py", line 89, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/views/generic/edit.py", line 151, in post
+    return self.form_valid(form)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/auth/views.py", line 108, in form_valid
+    auth_login(self.request, form.get_user())
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/auth/__init__.py", line 197, in login
+    user_logged_in.send(sender=user.__class__, request=request, user=user)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/auth/models.py", line 24, in update_last_login
+    user.save(update_fields=["last_login"])
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/auth/base_user.py", line 65, in save
+    super().save(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/base.py", line 902, in save
+    self.save_base(
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/base.py", line 1023, in save_base
+    post_save.send(
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/vedanica/justplucked/authapp/signals.py", line 11, in create_or_update_profile
+    instance.profile.save()
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 531, in __get__
+    raise self.RelatedObjectDoesNotExist(
+django.contrib.auth.models.User.profile.RelatedObjectDoesNotExist: User has no profile.
+Not Found: /favicon.ico
+Internal Server Error: /admin/auth/user/
+Traceback (most recent call last):
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/admin/options.py", line 719, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 246, in inner
+    return view(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/admin/options.py", line 2081, in changelist_view
+    response = self.response_action(
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1686, in response_action
+    response = func(self, request, queryset)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/admin/actions.py", line 49, in delete_selected
+    modeladmin.delete_queryset(request, queryset)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1324, in delete_queryset
+    queryset.delete()
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 1197, in delete
+    num_deleted, num_deleted_per_model = collector.delete()
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/deletion.py", line 507, in delete
+    signals.post_delete.send(
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/vedanica/justplucked/order/signals.py", line 47, in refresh_homepage_on_order_change
+    _rebuild_homepage_data()
+  File "/home/vedanica/justplucked/order/signals.py", line 28, in _rebuild_homepage_data
+    Product.objects
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 1481, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 1499, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 1506, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1643, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1675, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1585, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1399, in build_lookup
+    lhs = self.try_transform(lhs, name, lookups)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1455, in try_transform
+    raise FieldError(
+django.core.exceptions.FieldError: Unsupported lookup 'created_at__gte' for ForeignKey or join on the field not permitted.
+Not Found: /accounts/login/assets/imgs/theme/Spinner-3.gif
+Not Found: /accounts/login/justplucked.png
+Not Found: /accounts/login/assets/imgs/theme/Spinner-3.gif
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /wishlist.html
+Not Found: /accounts/login/assets/imgs/theme/Spinner-3.gif
+Not Found: /products/fresh-apple/assets/imgs/theme/Spinner-3.gif
+Not Found: /products/fresh-apple/justplucked.png
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /cart/assets/imgs/theme/Spinner-3.gif
+[UID:2087][3189542] Child process with pid: 3418234 was killed by signal: 15, core dumped: no
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /justplucked.png
+Not Found: /accounts/login/assets/imgs/theme/Spinner-3.gif
+Not Found: /accounts/login/justplucked.png
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /wishlist.html
+Not Found: /favicon.ico
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /justplucked.png
+Internal Server Error: /wishlist/add/27/
+Traceback (most recent call last):
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+sqlite3.IntegrityError: UNIQUE constraint failed: order_wishlistitem.wishlist_id, order_wishlistitem.product_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/vedanica/justplucked/order/views.py", line 297, in add_to_wishlist
+    WishlistItem.objects.create(wishlist=wishlist, product=product)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 663, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/base.py", line 902, in save
+    self.save_base(
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/base.py", line 1008, in save_base
+    updated = self._save_table(
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/base.py", line 1169, in _save_table
+    results = self._do_insert(
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/base.py", line 1210, in _do_insert
+    return manager._insert(
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 1854, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1881, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+django.db.utils.IntegrityError: UNIQUE constraint failed: order_wishlistitem.wishlist_id, order_wishlistitem.product_id
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /assets/imgs/theme/Spinner-3.gif
+[UID:2087][3189542] Child process with pid: 3425615 was killed by signal: 15, core dumped: no
+[UID:2087][3189542] Child process with pid: 3425616 was killed by signal: 15, core dumped: no
+[UID:2087][3189542] Child process with pid: 3425618 was killed by signal: 15, core dumped: no
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /assets/imgs/theme/Spinner-3.gif
+[UID:2087][3189542] Child process with pid: 3425768 was killed by signal: 15, core dumped: no
+[UID:2087][3189542] Child process with pid: 3426001 was killed by signal: 15, core dumped: no
+[UID:2087][3189542] Child process with pid: 3425767 was killed by signal: 15, core dumped: no
+[UID:2087][3189542] Child process with pid: 3426103 was killed by signal: 15, core dumped: no
+[UID:2087][3189542] Child process with pid: 3426106 was killed by signal: 15, core dumped: no
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /justplucked.png
+Not Found: /orders/assets/imgs/theme/Spinner-3.gif
+Not Found: /orders/justplucked.png
+Not Found: /products/assets/imgs/theme/Spinner-3.gif
+Not Found: /products/justplucked.png
+Not Found: /cart/assets/imgs/theme/Spinner-3.gif
+Not Found: /cart/justplucked.png
+Not Found: /static/imgs/theme/icons/payment-visa.svg
+Not Found: /static/imgs/theme/icons/payment-master.svg
+Not Found: /checkout/assets/imgs/theme/Spinner-3.gif
+Not Found: /checkout/justplucked.png
+Bad Request: /create-order/13
+Not Found: /favicon.ico
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /cart/assets/imgs/theme/Spinner-3.gif
+Not Found: /static/imgs/theme/icons/payment-visa.svg
+Not Found: /static/imgs/theme/icons/payment-master.svg
+Not Found: /checkout/assets/imgs/theme/Spinner-3.gif
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /products/assets/imgs/theme/Spinner-3.gif
+Bad Request: /create-order/13
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /static/assets/js/plugins/jquery.syotimer.min.js.map
+Not Found: /static/assets/js/plugins/jquery.syotimer.min.js.map
+Not Found: /cart/assets/imgs/theme/Spinner-3.gif
+Not Found: /static/imgs/theme/icons/payment-visa.svg
+Not Found: /static/imgs/theme/icons/payment-master.svg
+Not Found: /checkout/assets/imgs/theme/Spinner-3.gif
+Not Found: /static/assets/js/plugins/jquery.syotimer.min.js.map
+Bad Request: /create-order/13
+Not Found: /cart/assets/imgs/theme/Spinner-3.gif
+Internal Server Error: /admin/order/order/
+Traceback (most recent call last):
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/admin/options.py", line 719, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 246, in inner
+    return view(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/admin/options.py", line 2081, in changelist_view
+    response = self.response_action(
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1686, in response_action
+    response = func(self, request, queryset)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/admin/actions.py", line 49, in delete_selected
+    modeladmin.delete_queryset(request, queryset)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1324, in delete_queryset
+    queryset.delete()
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 1197, in delete
+    num_deleted, num_deleted_per_model = collector.delete()
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/deletion.py", line 507, in delete
+    signals.post_delete.send(
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/vedanica/justplucked/order/signals.py", line 47, in refresh_homepage_on_order_change
+    _rebuild_homepage_data()
+  File "/home/vedanica/justplucked/order/signals.py", line 28, in _rebuild_homepage_data
+    Product.objects
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 1481, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 1499, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 1506, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1643, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1675, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1585, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1399, in build_lookup
+    lhs = self.try_transform(lhs, name, lookups)
+  File "/home/vedanica/virtualenv/justplucked/3.10/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1455, in try_transform
+    raise FieldError(
+django.core.exceptions.FieldError: Unsupported lookup 'created_at__gte' for ForeignKey or join on the field not permitted.
+Not Found: /static/assets/js/plugins/jquery.syotimer.min.js.map
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /products/assets/imgs/theme/Spinner-3.gif
+Not Found: /cart/assets/imgs/theme/Spinner-3.gif
+Not Found: /static/imgs/theme/icons/payment-visa.svg
+Not Found: /checkout/assets/imgs/theme/Spinner-3.gif
+Not Found: /static/imgs/theme/icons/payment-master.svg
+Not Found: /create-order/15/
+Not Found: /create-order/15/
+Not Found: /static/assets/js/plugins/jquery.syotimer.min.js.map
+Not Found: /products/guava/assets/imgs/theme/Spinner-3.gif
+Not Found: /products/guava/justplucked.png
+Not Found: /static/imgs/theme/icons/payment-master.svg
+Not Found: /static/imgs/theme/icons/payment-visa.svg
+Not Found: /checkout/assets/imgs/theme/Spinner-3.gif
+Not Found: /create-order/15/
+Not Found: /create123
+Not Found: /static/assets/js/plugins/jquery.syotimer.min.js.map
+Not Found: /create-order/15/
+Bad Request: /create-order/15
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Method Not Allowed (GET): /cart/add/23/
+Not Found: /assets/imgs/theme/Spinner-3.gif
+Not Found: /cart/assets/imgs/theme/Spinner-3.gif
+Not Found: /static/imgs/theme/icons/payment-master.svg
+Not Found: /checkout/assets/imgs/theme/Spinner-3.gif
+Not Found: /static/imgs/theme/icons/payment-visa.svg
+Bad Request: /create-order/16
+Not Found: /static/imgs/theme/icons/payment-visa.svg
+Not Found: /static/imgs/theme/icons/payment-master.svg
+Not Found: /checkout/assets/imgs/theme/Spinner-3.gif

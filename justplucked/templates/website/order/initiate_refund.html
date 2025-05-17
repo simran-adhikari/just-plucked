@@ -1,0 +1,40 @@
+{% extends 'website/base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header bg-dark text-white">
+                    <h4>Request Refund for Order #{{ order.invoice_id }}</h4>
+                </div>
+                <div class="card-body">
+                    <div class="alert alert-info">
+                        <h5>Order Details</h5>
+                        <p>Order Date: {{ order.created|date:"F j, Y" }}</p>
+                        <p>Total Amount: ${{ order.total }}</p>
+                    </div>
+                    
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="reason" class="form-label">Refund Reason</label>
+                            <textarea class="form-control" id="reason" name="reason" rows="4" required></textarea>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">Refund Amount</label>
+                            <input type="text" class="form-control" value="${{ order.total }}" readonly>
+                        </div>
+                        
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <a href="{% url 'order_detail' order.id %}" class="btn btn-secondary me-md-2">Cancel</a>
+                            <button type="submit" class="btn btn-warning">Submit Refund Request</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

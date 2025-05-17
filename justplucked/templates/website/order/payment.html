@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-success text-white">
+                    <h4>Complete Your Payment</h4>
+                </div>
+                <div class="card-body text-center">
+                    <h5 class="card-title">Order #{{ order.invoice_id }}</h5>
+                    <p class="lead">Total Amount: ${{ order.total }}</p>
+                    
+                    <div id="payment-processing" class="my-4">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Processing...</span>
+                        </div>
+                        <p class="mt-2">Processing your payment...</p>
+                    </div>
+                    
+                    <div id="payment-success" class="d-none">
+                        <div class="alert alert-success">
+                            <h4><i class="bi bi-check-circle-fill"></i> Payment Successful!</h4>
+                            <p>Your order has been placed successfully.</p>
+                            <a href="{% url 'order_detail' order.pk %}" class="btn btn-success">
+                                View Order Details
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div id="payment-failed" class="d-none">
+                        <div class="alert alert-danger">
+                            <h4><i class="bi bi-exclamation-triangle-fill"></i> Payment Failed</h4>
+                            <p>There was an issue processing your payment.</p>
+                            <a href="{% url 'checkout' %}" class="btn btn-danger">
+                                Try Again
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Check payment status
+    function checkPaymentStatus() {
+        fetch('{% url "payment_status" order.id %}')
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'paid') {
+                    document.getElementById('payment-processing').classList.add('d-none');
+                    document.getElementById('payment-success').classList.remove('d-none');
+                    // Redirect after 3 seconds
+                    setTimeout(() => {
+                        window.location.href = "{% url 'payment_success' order.pk %}";
+                    }, 3000);
+                } else if (data.status === 'failed') {
+                    document.getElementById('payment-processing').classList.add('d-none');
+                    document.getElementById('payment-failed').classList.remove('d-none');
+                } else {
+                    // Check again after 1 second
+                    setTimeout(checkPaymentStatus, 1000);
+                }
+            });
+    }
+    
+    // Start checking payment status
+    document.addEventListener('DOMContentLoaded', checkPaymentStatus);
+</script>
+{% endblock %}

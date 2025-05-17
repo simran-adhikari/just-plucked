@@ -1,0 +1,161 @@
+
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Just-Plucked</title>
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:title" content="" />
+        <meta property="og:type" content="" />
+        <meta property="og:url" content="" />
+        <meta property="og:image" content="" />
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="justplucked.png" />
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="stylesheet" href="{% static 'assets/css/plugins/animate.min.css' %}" />
+        <link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+        
+        <style>
+            /* Floating Button */
+            .floating-button {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                background-color:  #4caf50;
+                color: white;
+                padding: 15px;
+                border-radius: 100%;
+                font-size: 28px;
+                cursor: pointer;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            }
+
+            /* Chatbot Popup */
+            .chatbot-popup {
+                position: fixed;
+                bottom: 80px;
+                right: 20px;
+                
+                background-color: white;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                padding: 0px !important;
+                width: 700px;
+                height: 400px;
+                box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+                z-index: 1000;
+                overflow: hidden;
+                overflow:auto;
+                display: none; /* Initially hidden */
+            }
+
+            /* Chatbot content */
+            .chatbot-content {
+                padding: 2px;
+                text-align: center;
+                background-color:  #4caf50;
+            }
+
+            /* Close button */
+            .close-chatbot {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                background: none;
+                border: none;
+                font-size: 18px;
+                color: #888;
+                cursor: pointer;
+            }
+            .discounted-price {
+                font-weight: bold;
+                color: red;
+              }
+            .regular-price {
+                color: gray;
+                text-decoration: line-through;
+                margin-left: 5px;
+              }
+        </style>
+    </head>
+    <body>
+        {% include 'website/includes/navbar.html' %}
+        
+        <main class="main">
+            {% block content %}{% endblock %}
+        </main>
+        
+        {% include 'website/includes/footer.html' %}
+        
+        <!-- Floating Button for Chatbot -->
+        <div id="chatbot-button" class="floating-button">
+            <i class="fas fa-comments"></i> <!-- Chat icon -->
+        </div>
+
+        <!-- Chatbot Popup -->
+        <div id="chatbot-popup" class="chatbot-popup p-3">
+            <div class="chatbot-content p-0">
+                
+                {% include "website/chatbot/chat.html" %}
+                <button id="close-chatbot" class="close-chatbot">X</button>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const chatbotButton = document.getElementById('chatbot-button');
+                const chatbotPopup = document.getElementById('chatbot-popup');
+                const closeChatbotButton = document.getElementById('close-chatbot');
+
+                // Show the chatbot popup when the floating button is clicked
+                chatbotButton.addEventListener('click', function() {
+                    chatbotPopup.style.display = 'block';
+                });
+
+                // Hide the chatbot popup when the close button is clicked
+                closeChatbotButton.addEventListener('click', function() {
+                    chatbotPopup.style.display = 'none';
+                });
+            });
+
+            // Variant selection (Existing Code for Cart functionality)
+            document.querySelectorAll('.variant-selector').forEach(item => {
+                item.addEventListener('click', function() {
+                    document.querySelectorAll('.variant-selector').forEach(i => i.classList.remove('active'));
+                    this.classList.add('active');
+                    document.getElementById('selected_variant').value = this.dataset.variantId;
+                });
+            });
+        </script>
+
+        {% block scripts %}{% endblock %}
+        
+        <!-- Vendor JS-->
+        <script src="{% static 'assets/js/vendor/modernizr-3.6.0.min.js' %}"></script>
+        <script src="{% static 'assets/js/vendor/jquery-3.6.0.min.js' %}"></script>
+        <script src="{% static 'assets/js/vendor/jquery-migrate-3.3.0.min.js' %}"></script>
+        <script src="{% static 'assets/js/vendor/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static 'assets/js/plugins/slick.js' %}"></script>
+        <script src="{% static 'assets/js/plugins/jquery.syotimer.min.js' %}"></script>
+        <script src="{% static 'assets/js/plugins/wow.js' %}"></script>
+        <script src="{% static 'assets/js/plugins/perfect-scrollbar.js' %}"></script>
+        <script src="{% static 'assets/js/plugins/magnific-popup.js' %}"></script>
+        <script src="{% static 'assets/js/plugins/select2.min.js' %}"></script>
+        <script src="{% static 'assets/js/plugins/waypoints.js' %}"></script>
+        <script src="{% static 'assets/js/plugins/counterup.js' %}"></script>
+        <script src="{% static 'assets/js/plugins/jquery.countdown.min.js' %}"></script>
+        <script src="{% static 'assets/js/plugins/images-loaded.js' %}"></script><script src="{% static 'assets/js/plugins/scrollup.js' %}"></script>
+
+        <script src="{% static 'assets/js/plugins/isotope.js' %}"></script>
+   
+        <script src="{% static 'assets/js/plugins/jquery.vticker-min.js' %}"></script>
+        <script src="{% static 'assets/js/plugins/jquery.theia.sticky.js' %}"></script>
+        <script src="{% static 'assets/js/plugins/jquery.elevatezoom.js' %}"></script>
+        <script src="{% static 'assets/js/main.js' %}"></script>
+        <script src="{% static 'assets/js/shop.js' %}"></script>
+    </body>
+</html>

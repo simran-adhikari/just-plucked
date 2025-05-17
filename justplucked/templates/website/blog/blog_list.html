@@ -1,0 +1,139 @@
+{% extends "website/base.html" %}
+
+{% block content %}
+ <div class="page-header breadcrumb-wrap">
+    <div class="container">
+        
+    </div>
+</div>
+    <div class="page-content my-50 py-50">
+        <div class="container">
+            <div class="row mt-50 ml-20 mr-20">
+                <!-- Left Sidebar: Categories and Tags -->
+                
+
+                <!-- Right Content: Blog List -->
+                <div class="col-lg-8">
+                    <!-- Blog List Header with Sorting -->
+                    <div class="shop-product-fillter mb-50">
+                        <div class="totall-product">
+                            <h2>
+                                <img class="w-36px mr-10" src="/static/imgs/theme/icons/icon-blog.svg" alt="" />
+                                Crop Care Suggestions
+                            </h2>
+                        </div>
+                        <div class="sort-by-product-area">
+                             
+
+                            <div class="sort-by-cover">
+                                <div class="sort-by-product-wrap">
+                                    <div class="sort-by">
+                                        <span><i class="fi-rs-apps-sort"></i>Sort:</span>
+                                    </div>
+                                    <div class="sort-by-dropdown-wrap">
+                                        <span>Featured <i class="fi-rs-angle-small-down"></i></span>
+                                    </div>
+                                </div>
+                                <div class="sort-by-dropdown">
+                                    <ul>
+                                        <li><a href="?sort=featured">Featured</a></li>
+                                        <li><a href="?sort=newest">Newest</a></li>
+                                        <li><a href="?sort=comments">Most comments</a></li>
+                                        <li><a href="?sort=date">Release Date</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Posts List -->
+                    <div class="loop-grid loop-big">
+                        <div class="row">
+                            {% for blog in blogs %}
+                            <article class="first-post mb-30 hover-up animated col-12">
+                                <div class="position-relative overflow-hidden">
+                                    <div class="post-thumb border-radius-15">
+                                        <a href="{% url 'blog-detail' slug=blog.slug %}">
+                                            {% if blog.thumbnail %}
+                                            <img class="border-radius-15" src="{{ blog.thumbnail.url }}" alt="{{ blog.title }}" style="width: 500px;"/>
+                                            {% else %}
+                                            <img class="border-radius-15" src="https://thumb.ac-illust.com/b1/b170870007dfa419295d949814474ab2_t.jpeg" alt="{{ blog.title }}" style="width: 500px;"/>
+                                            {% endif %}
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="entry-content">
+                                    <h4 class="post-title mb-20">
+                                        <a href="{% url 'blog-detail' slug=blog.slug %}">{{ blog.title }}</a>
+                                    </h4>
+                                    <p class="post-exerpt font-medium text-muted mb-30">
+                                        {{ blog.content|striptags|truncatewords:30 }}
+                                    </p>
+                                    <div class="mb-20 entry-meta meta-2">
+                                        <div class="entry-meta meta-1 mb-30">
+                                            <div class="font-sm">
+                                                <span class="author">
+                                                    By <a href="{% url 'author-blog-list' username=blog.author.username %}">{{ blog.author.get_full_name|default:blog.author.username }}</a>
+                                                </span>
+                                                <span class="ml-30">{{ blog.created_at|date:"M d, Y" }}</span>
+                                                <span class="ml-30"><span class="mr-10 text-muted"><i class="fi-rs-eye"></i></span>{{ blog.view_count|default:0 }}</span>
+                                                <span class="ml-30"><span class="mr-10 text-muted"><i class="fi-rs-comment-alt"></i></span>{{ blog.comments.count }}</span>
+                                            </div>
+                                        </div>
+                                        <a href="{% url 'blog-detail' slug=blog.slug %}" class="btn btn-sm">
+                                            Read more<i class="fi-rs-arrow-right ml-10"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                            {% empty %}
+                            <div class="col-12">
+                                <div class="alert alert-info">No blog posts found.</div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    {% if blogs.has_other_pages %}
+                    <div class="pagination-area mt-15 mb-sm-5 mb-lg-0">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-start">
+                                {% if blogs.has_previous %}
+                                <li class="page-item">
+                                    <a class="page-link" href="?page=1"><i class="fi-rs-angle-double-small-left"></i></a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="?page={{ blogs.previous_page_number }}"><i class="fi-rs-angle-small-left"></i></a>
+                                </li>
+                                {% endif %}
+                                
+                                {% for i in blogs.paginator.page_range %}
+                                    {% if blogs.number == i %}
+                                    <li class="page-item active"><a class="page-link" href="#">{{ i }}</a></li>
+                                    {% else %}
+                                    <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+                                    {% endif %}
+                                {% endfor %}
+                                
+                                {% if blogs.has_next %}
+                                <li class="page-item">
+                                    <a class="page-link" href="?page={{ blogs.next_page_number }}"><i class="fi-rs-angle-small-right"></i></a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="?page={{ blogs.paginator.num_pages }}"><i class="fi-rs-angle-double-small-right"></i></a>
+                                </li>
+                                {% endif %}
+                            </ul>
+                        </nav>
+                    </div>
+                    {% endif %}
+                </div>
+                <!-- End col-lg-8 -->
+            </div>
+            <!-- End row -->
+        </div>
+        <!-- End container -->
+    </div>
+ 
+{% endblock %}

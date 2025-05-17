@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Activation Just Plucked</title>
+</head>
+<body>
+    <h2>Hello {{ user.username }},</h2>
+    <p>Thank you for registering with us!</p>
+    <p>To complete your registration, please activate your account by clicking the link below:</p>
+    <p><a href="http://justplucked.vedanica.com/accounts/activate/{{ uid }}/{{ token }}/">Activate Your Account</a></p>
+    <p>If you did not make this request, please ignore this email.</p>
+    <p>Thank you,</p>
+    <p>The Team</p>
+</body>
+</html>

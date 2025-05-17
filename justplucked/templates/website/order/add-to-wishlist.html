@@ -1,0 +1,28 @@
+<form method="post" action="{% url 'add_to_wishlist' product.id %}" class="wishlist-form">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-outline-secondary">
+        <i class="far fa-heart"></i> Add to Wishlist
+    </button>
+</form>
+
+<script>
+// AJAX submission for better UX
+document.querySelectorAll('.wishlist-form').forEach(form => {
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        fetch(this.action, {
+            method: 'POST',
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest',
+                'X-CSRFToken': this.querySelector('[name=csrfmiddlewaretoken]').value
+            },
+            body: new FormData(this)
+        })
+        .then(response => response.json())
+        .then(data => {
+            window.location.href = data.redirect_url;
+        });
+    });
+});
+
+</script>

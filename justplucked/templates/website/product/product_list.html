@@ -1,0 +1,205 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block content %}
+ <div class="page-header mt-30 mb-">
+            <div class="container">
+                
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-xl-3 text-center">
+                        <h1 class="mb-15">Products</h1>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+<main class="main p-4">
+    
+    
+    <div class="container mb-30">
+        <div class="row flex-row-reverse">
+            <div class="totall-product">
+                        <p>We found <strong class="text-brand">{{ products.count }}</strong> items for you!</p>
+                    </div>
+            <div class="col-lg-4-5">
+                <div class="shop-product-fillter">
+                     
+                    <br/>
+                    
+                    <div class="sort-by-product-area">
+                        <form method="get" class="d-flex align-items-center">
+                            <!-- Search Input -->
+                            <div class="sort-by-cover mr-10">
+                                <div class="sort-by-product-wrap">
+                                    <div class="sort-by">
+                                        <span><i class="fi-rs-search"></i> Search:</span>
+                                    </div>
+                                    <input type="text" name="search" placeholder="Search products" value="{{ search_query }}" class="form-control">
+                                </div>
+                            </div>
+                            
+                            <!-- Sorting Options -->
+                            <div class="sort-by-cover mr-10">
+                                <div class="sort-by-product-wrap">
+                                    <div class="sort-by">
+                                        <span><i class="fi-rs-apps-sort"></i>Sort by:</span>
+                                    </div>
+                                    <div class="sort-by-dropdown-wrap">
+                                        <select name="sort" class="form-control" onchange="this.form.submit()">
+                                            <option value="name" {% if sort_by == 'name' %}selected{% endif %}>Name</option>
+                                            <option value="price_asc" {% if sort_by == 'price_asc' %}selected{% endif %}>Price: Low to High</option>
+                                            <option value="price_desc" {% if sort_by == 'price_desc' %}selected{% endif %}>Price: High to Low</option>
+                                            <option value="created" {% if sort_by == 'created' %}selected{% endif %}>Newest First</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Category Filter -->
+                            <div class="sort-by-cover mr-10">
+                                <div class="sort-by-product-wrap">
+                                    <div class="sort-by">
+                                        <span><i class="fi-rs-filter"></i> Category:</span>
+                                    </div>
+                                    <div class="sort-by-dropdown-wrap">
+                                        <select name="category" class="form-control" onchange="this.form.submit()">
+                                            <option value="">All Categories</option>
+                                            {% for category in categories %}
+                                                <option value="{{ category.slug }}" {% if filter_category == category.slug %}selected{% endif %}>{{ category.name }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-sm btn-default"><i class="fi-rs-filter mr-5"></i> Apply</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="row product-grid">
+                    {% for product in products %}
+                    <div class="col-lg-4 col-md-4 col-12 col-sm-6">
+                        <div class="product-cart-wrap mb-30">
+                            <div class="product-img-action-wrap">
+                                <div class="product-img product-img-zoom">
+                                    <a href="{% url 'product_detail' product.slug %}">
+                                        {% if product.image %}
+                                        <img class="default-img" src="{{ product.image.url }}" alt="{{ product.name }}" />
+                                        {% else %}
+                                        <img class="default-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTda4dspATpCQyJnM7oO20Pner4B7rtOkAqaQ&s" alt="{{ product.name }}" />
+                                        {% endif %}
+                                    </a>
+                                </div>
+                                <div class="product-action-1">
+                                     
+                                    {% include 'website/order/add-to-wishlist-mini.html' %}
+                                     
+                                </div>
+                                {% if product.is_new %}
+                                <div class="product-badges product-badges-position product-badges-mrg">
+                                    <span class="new">New</span>
+                                </div>
+                                {% endif %}
+                            </div>
+                            <div class="product-content-wrap">
+                                <div class="product-category">
+                                    <a href="?category={{ product.category.slug }}">{{ product.category.name }}</a>
+                                </div>
+                                <h2><a href="{% url 'product_detail' product.slug %}">{{ product.name }}</a></h2>
+                                <div class="product-rate-cover">
+                                    <div class="product-rate d-inline-block">
+                                        <div class="product-rating" style="width: 90%"></div>
+                                    </div>
+                                    <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                </div>
+                                <div>
+                                    <span class="font-small text-muted">Stock: {{ product.stock_quantity }}</span>
+                                </div>
+                                <div class="product-card-bottom">
+                                    <div class="product-price">
+                                        <span>${{ product.regular_price }}</span>
+                                        {% if product.discount_price %}
+                                        <span class="old-price">${{ product.discount_price }}</span>
+                                        {% endif %}
+                                    </div>
+                                    <div class="add-cart">
+                                        <form method="post" action="{% url 'add_to_cart' product.id %}">
+                                            {% csrf_token %}
+                                            <button type="submit" class="add" >
+                                                <p class="add" >
+                                                <i class="fi-rs-shopping-cart mr-5"></i>Add
+                                                </p>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% empty %}
+                    <div class="col-12">
+                        <div class="alert alert-warning">No products found matching your criteria.</div>
+                    </div>
+                    {% endfor %}
+                </div>
+                
+                {% if products.has_other_pages %}
+                <div class="pagination-area mt-20 mb-20">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-start">
+                            {% if products.has_previous %}
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{ products.previous_page_number }}{% if search_query %}&search={{ search_query }}{% endif %}{% if sort_by %}&sort={{ sort_by }}{% endif %}{% if filter_category %}&category={{ filter_category }}{% endif %}"><i class="fi-rs-arrow-small-left"></i></a>
+                            </li>
+                            {% endif %}
+                            
+                            {% for i in products.paginator.page_range %}
+                                {% if products.number == i %}
+                                <li class="page-item active"><a class="page-link" href="#">{{ i }}</a></li>
+                                {% else %}
+                                <li class="page-item"><a class="page-link" href="?page={{ i }}{% if search_query %}&search={{ search_query }}{% endif %}{% if sort_by %}&sort={{ sort_by }}{% endif %}{% if filter_category %}&category={{ filter_category }}{% endif %}">{{ i }}</a></li>
+                                {% endif %}
+                            {% endfor %}
+                            
+                            {% if products.has_next %}
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{ products.next_page_number }}{% if search_query %}&search={{ search_query }}{% endif %}{% if sort_by %}&sort={{ sort_by }}{% endif %}{% if filter_category %}&category={{ filter_category }}{% endif %}"><i class="fi-rs-arrow-small-right"></i></a>
+                            </li>
+                            {% endif %}
+                        </ul>
+                    </nav>
+                </div>
+                {% endif %}
+            </div>
+            
+            <div class="col-lg-1-5 primary-sidebar sticky-sidebar">
+                 
+                
+                <!-- Price Range Filter -->
+                <div class="sidebar-widget price_range range mb-30">
+                    <h5 class="section-title style-1 mb-30">Filter by price</h5>
+                    <form method="get">
+                        <input type="hidden" name="search" value="{{ search_query }}">
+                        <input type="hidden" name="sort" value="{{ sort_by }}">
+                        <input type="hidden" name="category" value="{{ filter_category }}">
+                        
+                        <div class="price-filter">
+                            <div class="price-filter-inner">
+                                <div class="mb-20">
+                                    <label for="price_min">Min Price:</label>
+                                    <input type="number" name="price_min" id="price_min" value="{{ filter_price_min }}" class="form-control mb-10">
+                                    
+                                    <label for="price_max">Max Price:</label>
+                                    <input type="number" name="price_max" id="price_max" value="{{ filter_price_max }}" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-sm btn-default mt-10"><i class="fi-rs-filter mr-5"></i> Filter</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

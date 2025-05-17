@@ -1,0 +1,165 @@
+{% extends "admin/base_site.html" %}
+{% load i18n static jazzmin %}
+{% get_jazzmin_ui_tweaks as jazzmin_ui %}
+
+{% block bodyclass %}{{ block.super }} dashboard{% endblock %}
+{% block content_title %}{% trans 'Dashboard' %}{% endblock %}
+
+{% block breadcrumbs %}
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{% url 'admin:index' %}">{% trans 'Home' %}</a></li>
+    <li class="breadcrumb-item active">{% trans 'Dashboard' %}</li>
+</ol>
+{% endblock %}
+
+{% block extrahead %}
+    {{ block.super }}
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid px-2">
+    <!-- Summary Cards -->
+    <div class="row g-4">
+        <div class="col-md-3 col-sm-6">
+            <div class="card text-white bg-success shadow rounded-3">
+                <div class="card-body">
+                    <h5 class="card-title">{% trans "Total Farmers" %}</h5><br/>
+                    <h3 class="fw-bold">{{ farmer|default:0 }}</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="card text-white bg-info shadow rounded-3">
+                <div class="card-body">
+                    <h5 class="card-title">{% trans "Total Products" %}</h5><br/>
+                    <h3 class="fw-bold">{{ total_products|default:0 }}</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="card text-white bg-warning shadow rounded-3">
+                <div class="card-body">
+                    <h5 class="card-title">{% trans "Total Orders" %}</h5><br/>
+                    <h3 class="fw-bold">{{ total_orders|default:0 }}</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="card text-white bg-primary shadow rounded-3">
+                <div class="card-body">
+                    <h5 class="card-title">{% trans "Revenue" %}</h5><br/>
+                    <h3 class="fw-bold">${{ total_revenue|default:"0.00" }}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Charts -->
+    <div class="row mt-3 g-4">
+        <div class="col-lg-6 col-12">
+            <div class="card shadow rounded-3">
+                <div class="card-header fw-semibold">{% trans "Weekly Sales" %}</div>
+                <div class="card-body">
+                    <canvas id="salesChart" height="200"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-12">
+            <div class="card shadow rounded-3">
+                <div class="card-header fw-semibold">{% trans "Top Categories" %}</div>
+                <div class="card-body">
+                    <canvas id="categoryChart" height="200"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- More Charts -->
+    <div class="row mt-4 g-4">
+        <div class="col-lg-6 col-12">
+            <div class="card shadow rounded-3">
+                <div class="card-header fw-semibold">{% trans "Inventory Levels" %}</div>
+                <div class="card-body">
+                    <canvas id="inventoryChart" height="200"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-12">
+            <div class="card shadow rounded-3">
+                <div class="card-header fw-semibold">{% trans "Order Status" %}</div>
+                <div class="card-body">
+                    <canvas id="orderStatusChart" height="200"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Chart Scripts -->
+<script>
+    new Chart(document.getElementById('salesChart'), {
+        type: 'line',
+        data: {
+            labels: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+            datasets: [{
+                label: 'Sales ($)',
+                data: [500, 700, 1200, 900, 1400, 1000, 1700],
+                borderColor: 'rgba(75, 192, 192, 1)',
+                fill: false,
+                tension: 0.3
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+        }
+    });
+
+    new Chart(document.getElementById('categoryChart'), {
+        type: 'doughnut',
+        data: {
+            labels: ['Vegetables', 'Fruits', 'Dairy', 'Grains', 'Spices'],
+            datasets: [{
+                data: [150, 200, 100, 70, 40],
+                backgroundColor: ['#4caf50', '#ff9800', '#03a9f4', '#8bc34a', '#ffc107']
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+        }
+    });
+
+    new Chart(document.getElementById('inventoryChart'), {
+        type: 'bar',
+        data: {
+            labels: ['Tomatoes', 'Apples', 'Milk', 'Wheat', 'Chili Powder'],
+            datasets: [{
+                label: 'Stock',
+                data: [300, 250, 180, 400, 90],
+                backgroundColor: '#2196f3'
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+        }
+    });
+
+    new Chart(document.getElementById('orderStatusChart'), {
+        type: 'pie',
+        data: {
+            labels: ['Completed', 'Pending', 'Cancelled'],
+            datasets: [{
+                data: [900, 250, 98],
+                backgroundColor: ['#4caf50', '#ffc107', '#f44336']
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+        }
+    });
+</script>
+{% endblock %}
